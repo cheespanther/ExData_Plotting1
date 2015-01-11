@@ -1,4 +1,3 @@
-que tranza... 
 
 ## Introduction
 
