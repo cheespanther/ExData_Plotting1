@@ -17,5 +17,5 @@ plot3 <- function(){
   b <- points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange", xlab = "")
   c <-points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue", xlab = "")
   leg.txt <- c("Energy_submetering_1", "Energy_submetering_2","Energy_sub_metering_3")
-  ## legend(a, y=NULL)
+  ## legend(a, y=NULL) ## WAS NOT ABLE TO PRINT LEGEND PROPERLY
 }
