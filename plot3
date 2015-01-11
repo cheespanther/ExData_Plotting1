@@ -13,7 +13,9 @@ datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" & datamatrix[,1] =
 ##PLOT3
 
 plot3 <- function(){
-  plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black")
-  points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange")
-  points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue") 
+  a <-plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black", xlab = "")
+  b <- points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange", xlab = "")
+  c <-points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue", xlab = "")
+  leg.txt <- c("Energy_submetering_1", "Energy_submetering_2","Energy_sub_metering_3")
+  ## legend(a, y=NULL)
 }
