@@ -11,7 +11,7 @@ row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
 datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" & datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
 
 ## PLOT 2
-plot2 <- plot(as.numeric(datamatrix2[,3]), type = "l", ylab = "Global Active Power (kilowatts)")
+plot2 <- plot(as.numeric(datamatrix2[,3]), type = "l", ylab = "Global Active Power (kilowatts)", xlab = "")
 
 
 
