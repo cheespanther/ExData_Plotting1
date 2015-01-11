@@ -7,30 +7,5 @@ datamatrix <- do.call(rbind,(lapply(data, rbind)))
 col.names <- datamatrix[1]
 datamatrix2 <- datamatrix[-1,]
 row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
+
 plot1 <- hist(as.numeric(datamatrix2[,3]), xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "orange")
-
-plot2 <- plot(as.numeric(datamatrix2[,3]), type = "l", ylab = "Global Active Power (kilowatts)")
-
-
-
-plot3 <- function(){
-  plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black")
-  points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange")
-  points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue") 
-
-  
-plot4 <- function(){
-  par(mfrow=c(2,2))
-  ##1
-  plot(as.numeric(datamatrix2[,3]), type = "l", ylab = "Global Active Power (kilowatts)")
-  ##2
-  plot(as.numeric(datamatrix2[,5]), type = "l", ylab = "Voltage")
-  ##3
-  plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black")
-  points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange")
-  points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue")
-  ##4
-  plot(as.numeric(datamatrix2[,4]), type = "l", ylab = "Global Reactive Power (kilowatts)")
-  
-  
-}
