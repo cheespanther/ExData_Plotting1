@@ -1,5 +1,4 @@
-Plot 1 png
-
-Plot 2 png
-Plot 3 png
-Plot 4 png
+git add plot1.png
+git commit -m 'add png file'
+git remote add origin http://buenasraices.org/plot1.png
+git push -u origin master
