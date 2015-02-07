@@ -11,5 +11,7 @@ row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
 datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
 
 ## PLOT1
-par(mfrow=c(1,1))
-plot1 <- hist(as.numeric(datamatrix2[,3]), xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "orange")
+plot1 <- function(){
+  par(mfrow = c(1,1))
+  hist(as.numeric(datamatrix2[,3]), xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
+}
