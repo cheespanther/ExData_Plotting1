@@ -1,3 +1,6 @@
+plot1 <- function(rows){
+
+
 ## READ AND SUBSET DATA
 
 powerconsumption <- read.table("household_power_consumption.txt") ## READ TEXT FILE
@@ -10,8 +13,7 @@ col.names <- datamatrix[1] ## ASSIGNS COLUMN HEADERS
 row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
 datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
 
-## PLOT1
-plot1 <- function(){
+## PLOT1 MAKES PLOT
   par(mfrow = c(1,1))
   hist(as.numeric(datamatrix2[,3]), xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
 }
