@@ -1,4 +1,4 @@
-plot1 <- function(rows){
+plot1 <- function(){
 
 
 ## READ AND SUBSET DATA
