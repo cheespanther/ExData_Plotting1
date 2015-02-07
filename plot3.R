@@ -1,3 +1,5 @@
+plot3 <- function(){
+
 ## READS AND SUBSETS DATA
 
 powerconsumption <- read.table("household_power_consumption.txt") ## READ TEXT FILE
@@ -11,11 +13,13 @@ row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
 datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
 
 ##PLOT3
-par(mfrow=c(1,1))
-plot3 <- function(){
-  a <-plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black", xlab = "")
-  b <- points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange", xlab = "")
-  c <-points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue", xlab = "")
-  leg.txt <- c("Energy_submetering_1", "Energy_submetering_2","Energy_sub_metering_3")
-  ## legend(a, y=NULL) ## WAS NOT ABLE TO PRINT LEGEND PROPERLY
+
+  par(mfrow = c(1,1))
+  a <-plot(as.numeric(datamatrix2[,7]), type = "l", ylab = "Energy sub metering", col = "black", xlab = "", xaxt='n')
+  b <- points(as.numeric(datamatrix2[,8]), type = "l", ylab = "Energy sub metering", col = "orange", xlab = "", xaxt='n')
+  c <-points(as.numeric(datamatrix2[,9]), type = "l", ylab = "Energy sub metering", col = "blue", xlab = "", xaxt='n')
+  legend.txt <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
+  legend.color <- c("black","orange","blue" )
+  legend("topright", legend.txt, lty = c(1,1), col = legend.color, cex = 1, inset = 0) 
+  axis(1, at = seq(0, 2880, by = 1440), label = c("Thu", "Fri", "Sat"), tick = T)
 }
