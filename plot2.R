@@ -1,4 +1,4 @@
-plot2(rows){
+plot2(){
 
 ## READS AND SUBSETS DATA
 
