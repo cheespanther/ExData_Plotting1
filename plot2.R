@@ -10,7 +10,7 @@ plot2(){
   datamatrix <- do.call(rbind,(lapply(data, rbind))) ## CREATES MATRIX WITH SPLITDATA
   col.names <- datamatrix[1] ## ASSIGNS COLUMN HEADERS
   row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
-  datamatrix <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
+  datamatrix2 <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
 
 ## PLOT 2 MAKES PLOT OF THE DATA
   par(mfrow = c(1,1))
