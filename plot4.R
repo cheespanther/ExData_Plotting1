@@ -8,7 +8,7 @@ plot4 <- function()
   powerconsumptionchar <- lapply(powerconsumption, as.character) ## TRANSFORM DATA TO A CHARACTER LIST
   datachar <- unlist(powerconsumptionchar) ## TRANSFROM LIST TO CHARACTER TO APPLY STRSPLIT
   data <- strsplit(datachar, split = ";") ## SPLITS ROW INTO COLUMNS
-  datamatrix <- do.call(rbind,(lapply(data, rbind))) ## CREATES MATRIX WITH SPLITDATA
+  datamatrix <- do.call(rbind,(lapply(data, data.frame))) ## CREATES MATRIX WITH SPLITDATA
   col.names <- datamatrix[1] ## ASSIGNS COLUMN HEADERS
   row.names(datamatrix) <- 1:rows ## ASSIGNS NUMERIC ROWNAMES
   datamatrix2 <- subset(datamatrix, datamatrix[,1] == "2/2/2007" | datamatrix[,1] == "1/2/2007") ## SUBSETS TO FEB 1 AND 2
